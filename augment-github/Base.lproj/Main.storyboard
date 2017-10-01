@@ -60,6 +60,23 @@ Description</string>
                                     <outlet property="titleLabel" destination="Idj-Z3-JBA" id="t7P-uk-YyA"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="cyg-lY-a2m">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cyg-lY-a2m" id="dFh-Lc-0MH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="p5o-h2-NbD">
+                                            <rect key="frame" x="177" y="11" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="p5o-h2-NbD" firstAttribute="centerX" secondItem="dFh-Lc-0MH" secondAttribute="centerX" id="MNQ-tR-SKI"/>
+                                        <constraint firstItem="p5o-h2-NbD" firstAttribute="centerY" secondItem="dFh-Lc-0MH" secondAttribute="centerY" id="Oci-2S-wxP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="xVg-53-kL7" id="TRv-cQ-bQw"/>

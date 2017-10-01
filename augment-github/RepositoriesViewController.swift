@@ -11,6 +11,7 @@ import UIKit
 class RepositoriesViewController: UITableViewController {
 
     var repositories = [Repository]()
+    var shouldLoadMoreRepositories = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class RepositoriesViewController: UITableViewController {
     
     func fetchData() {
         Repository.fetchPublicRepositories(sinceRepository: repositories.last) { (repositories) in
+            self.shouldLoadMoreRepositories = repositories.count > 0 ? true : false
             self.repositories += repositories
             self.tableView.reloadData()
         }
@@ -29,10 +31,15 @@ class RepositoriesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return repositories.count + (shouldLoadMoreRepositories ? 1 : 0)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if shouldLoadMoreRepositories && indexPath.row == repositories.count {
+            fetchData()
+            return tableView.dequeueReusableCell(withIdentifier: "LoadingCell")!
+        }
+        
         let repository = repositories[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier) as! RepositoryCell
         cell.configCell(repository: repository)
