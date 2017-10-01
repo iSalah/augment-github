@@ -19,8 +19,13 @@ class Repository {
     var nbCommits: Int?
     var nbContributors: Int?
     
-    init?(fromJsonDict dict: NSDictionary) {
-        return nil
+    init?(fromDict dict: NSDictionary) {
+        guard let id = dict.value(forKey: "id") as? Int else { return nil }
+        guard let name = dict.value(forKey: "full_name") as? String else { return nil }
+        guard let description = dict.value(forKey: "description") as? String else { return nil }
+        self.id = id
+        self.name = name
+        self.description = description
     }
     
 }
