@@ -33,6 +33,17 @@ class RepositoryViewController: UITableViewController {
             self.repository?.size = repository?.size
             self.reloadData()
         }
+        
+        let attributes: [Repository.Attribute] = [.commits, .branches, .releases, .contributors]
+        for attribute in attributes {
+            Repository.fetch(numberOf: attribute, for: repository) { (nbAttribute) in
+                self.repository?.nbCommits = attribute == .commits ? nbAttribute : self.repository?.nbCommits
+                self.repository?.nbBranches = attribute == .branches ? nbAttribute : self.repository?.nbBranches
+                self.repository?.nbReleases = attribute == .releases ? nbAttribute : self.repository?.nbReleases
+                self.repository?.nbContributors = attribute == .contributors ? nbAttribute : self.repository?.nbContributors
+                self.reloadData()
+            }
+        }
     }
     
     func reloadData() {
@@ -40,6 +51,10 @@ class RepositoryViewController: UITableViewController {
         nameLabel.text = repository.name
         descriptionLabel.text = repository.description
         sizeLabel.text = "\(repository.size?.fileSizeFormat ?? "")"
+        commitsLabel.text = "\(repository.nbCommits?.formattedWithSeparator ?? "")"
+        branchesLabel.text = "\(repository.nbBranches?.formattedWithSeparator ?? "")"
+        releasesLabel.text = "\(repository.nbReleases?.formattedWithSeparator ?? "")"
+        contributorsLabel.text = "\(repository.nbContributors?.formattedWithSeparator ?? "")"
     }
     
 }
