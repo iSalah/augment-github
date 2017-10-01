@@ -16,4 +16,8 @@ class RepositoryCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    func configCell(repository: Repository) {
+        titleLabel.text = repository.name
+        descriptionLabel.text = repository.description
+    }
 }
