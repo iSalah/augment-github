@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84295B8A1F814C760082DA5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295B891F814C760082DA5F /* AppDelegate.swift */; };
-		84295B8C1F814C760082DA5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295B8B1F814C760082DA5F /* ViewController.swift */; };
+		84295B8C1F814C760082DA5F /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295B8B1F814C760082DA5F /* RepositoriesViewController.swift */; };
 		84295B8F1F814C760082DA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84295B8D1F814C760082DA5F /* Main.storyboard */; };
 		84295B911F814C760082DA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84295B901F814C760082DA5F /* Assets.xcassets */; };
 		84295B941F814C760082DA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84295B921F814C760082DA5F /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		3FC083D96599A7467EFE32F7 /* Pods-augment-github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-github.release.xcconfig"; path = "Pods/Target Support Files/Pods-augment-github/Pods-augment-github.release.xcconfig"; sourceTree = "<group>"; };
 		84295B861F814C760082DA5F /* augment-github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "augment-github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84295B891F814C760082DA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84295B8B1F814C760082DA5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84295B8B1F814C760082DA5F /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		84295B8E1F814C760082DA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84295B901F814C760082DA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84295B931F814C760082DA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		84295B9E1F814E660082DA5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84295B8B1F814C760082DA5F /* ViewController.swift */,
+				84295B8B1F814C760082DA5F /* RepositoriesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84295B8C1F814C760082DA5F /* ViewController.swift in Sources */,
+				84295B8C1F814C760082DA5F /* RepositoriesViewController.swift in Sources */,
 				84295B8A1F814C760082DA5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
