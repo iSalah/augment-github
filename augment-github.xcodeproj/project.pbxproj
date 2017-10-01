@@ -12,9 +12,13 @@
 		84295B8F1F814C760082DA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84295B8D1F814C760082DA5F /* Main.storyboard */; };
 		84295B911F814C760082DA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84295B901F814C760082DA5F /* Assets.xcassets */; };
 		84295B941F814C760082DA5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84295B921F814C760082DA5F /* LaunchScreen.storyboard */; };
+		906AD7652714D61267F9C77C /* Pods_augment_github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D3A38FEEC1F7F37D497D3 /* Pods_augment_github.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A9D3A38FEEC1F7F37D497D3 /* Pods_augment_github.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_augment_github.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECEBC99208F20AFC7F56ED5 /* Pods-augment-github.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-github.debug.xcconfig"; path = "Pods/Target Support Files/Pods-augment-github/Pods-augment-github.debug.xcconfig"; sourceTree = "<group>"; };
+		3FC083D96599A7467EFE32F7 /* Pods-augment-github.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-augment-github.release.xcconfig"; path = "Pods/Target Support Files/Pods-augment-github/Pods-augment-github.release.xcconfig"; sourceTree = "<group>"; };
 		84295B861F814C760082DA5F /* augment-github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "augment-github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84295B891F814C760082DA5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84295B8B1F814C760082DA5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906AD7652714D61267F9C77C /* Pods_augment_github.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246707FA141ABAB6F84118B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A9D3A38FEEC1F7F37D497D3 /* Pods_augment_github.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61612EC59D8EBEB3B7154057 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1ECEBC99208F20AFC7F56ED5 /* Pods-augment-github.debug.xcconfig */,
+				3FC083D96599A7467EFE32F7 /* Pods-augment-github.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84295B7D1F814C760082DA5F = {
 			isa = PBXGroup;
 			children = (
 				84295B881F814C760082DA5F /* augment-github */,
 				84295B871F814C760082DA5F /* Products */,
+				61612EC59D8EBEB3B7154057 /* Pods */,
+				246707FA141ABAB6F84118B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84295B981F814C760082DA5F /* Build configuration list for PBXNativeTarget "augment-github" */;
 			buildPhases = (
+				4C4DFCE58265534A78989034 /* [CP] Check Pods Manifest.lock */,
 				84295B821F814C760082DA5F /* Sources */,
 				84295B831F814C760082DA5F /* Frameworks */,
 				84295B841F814C760082DA5F /* Resources */,
+				31AAD812D7A3D698F683BC44 /* [CP] Embed Pods Frameworks */,
+				A61385910C0D3D5D0701310B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31AAD812D7A3D698F683BC44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-augment-github/Pods-augment-github-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C4DFCE58265534A78989034 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A61385910C0D3D5D0701310B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-augment-github/Pods-augment-github-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84295B821F814C760082DA5F /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		84295B991F814C760082DA5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECEBC99208F20AFC7F56ED5 /* Pods-augment-github.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		84295B9A1F814C760082DA5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC083D96599A7467EFE32F7 /* Pods-augment-github.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
