@@ -8,23 +8,57 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Table View Controller-->
+        <!--Repositories View Controller-->
         <scene sceneID="K8n-YF-dpu">
             <objects>
-                <tableViewController id="xVg-53-kL7" sceneMemberID="viewController">
+                <tableViewController id="xVg-53-kL7" customClass="RepositoriesViewController" customModule="augment_github" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X5p-3Q-c3V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3dA-UI-HfM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCellIdentifier" id="3dA-UI-HfM" customClass="RepositoryCell" customModule="augment_github" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3dA-UI-HfM" id="ox7-K9-bZx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Repository name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Z3-JBA">
+                                            <rect key="frame" x="15" y="7" width="345" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCb-QP-xgB">
+                                            <rect key="frame" x="15" y="25" width="345" height="11.5"/>
+                                            <string key="text">Repository
+Description</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="tCb-QP-xgB" secondAttribute="bottom" constant="7" id="1gu-3N-dVj"/>
+                                        <constraint firstAttribute="trailing" secondItem="Idj-Z3-JBA" secondAttribute="trailing" constant="15" id="72u-ud-iKH"/>
+                                        <constraint firstAttribute="trailing" secondItem="tCb-QP-xgB" secondAttribute="trailing" constant="15" id="Gw5-ML-kxT"/>
+                                        <constraint firstItem="tCb-QP-xgB" firstAttribute="top" secondItem="Idj-Z3-JBA" secondAttribute="bottom" id="b3f-cy-0U2"/>
+                                        <constraint firstItem="Idj-Z3-JBA" firstAttribute="top" secondItem="ox7-K9-bZx" secondAttribute="top" constant="7" id="eYe-g0-x1m"/>
+                                        <constraint firstItem="tCb-QP-xgB" firstAttribute="leading" secondItem="ox7-K9-bZx" secondAttribute="leading" constant="15" id="efN-LW-9EB"/>
+                                        <constraint firstItem="Idj-Z3-JBA" firstAttribute="leading" secondItem="ox7-K9-bZx" secondAttribute="leading" constant="15" id="fk7-lW-1Tb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="tCb-QP-xgB" id="qog-iT-0SU"/>
+                                    <outlet property="titleLabel" destination="Idj-Z3-JBA" id="t7P-uk-YyA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
