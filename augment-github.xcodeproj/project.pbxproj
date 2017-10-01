@@ -78,14 +78,86 @@
 		84295B881F814C760082DA5F /* augment-github */ = {
 			isa = PBXGroup;
 			children = (
-				84295B891F814C760082DA5F /* AppDelegate.swift */,
-				84295B8B1F814C760082DA5F /* ViewController.swift */,
-				84295B8D1F814C760082DA5F /* Main.storyboard */,
-				84295B901F814C760082DA5F /* Assets.xcassets */,
-				84295B921F814C760082DA5F /* LaunchScreen.storyboard */,
-				84295B951F814C760082DA5F /* Info.plist */,
+				84295B9B1F814E510082DA5F /* Config */,
+				84295B9D1F814E600082DA5F /* Application */,
+				84295B9E1F814E660082DA5F /* Controllers */,
+				84295B9F1F814E690082DA5F /* Views */,
+				84295BA01F814E6C0082DA5F /* Models */,
+				84295BA11F814E6E0082DA5F /* Services */,
+				84295BA21F814E710082DA5F /* UI */,
+				84295BA31F814E740082DA5F /* Helpers */,
+				84295BA41F814E760082DA5F /* Assets */,
 			);
 			path = "augment-github";
+			sourceTree = "<group>";
+		};
+		84295B9B1F814E510082DA5F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84295B951F814C760082DA5F /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		84295B9D1F814E600082DA5F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84295B891F814C760082DA5F /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		84295B9E1F814E660082DA5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84295B8B1F814C760082DA5F /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		84295B9F1F814E690082DA5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		84295BA01F814E6C0082DA5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84295BA11F814E6E0082DA5F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		84295BA21F814E710082DA5F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84295B921F814C760082DA5F /* LaunchScreen.storyboard */,
+				84295B8D1F814C760082DA5F /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		84295BA31F814E740082DA5F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		84295BA41F814E760082DA5F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				84295B901F814C760082DA5F /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
