@@ -13,7 +13,7 @@ class Repository {
     var id: Int
     var name: String
     var description: String
-    var size: Double?
+    var size: Int64?
     var nbBranches: Int?
     var nbReleases: Int?
     var nbCommits: Int?
@@ -23,9 +23,12 @@ class Repository {
         guard let id = dict.value(forKey: "id") as? Int else { return nil }
         guard let name = dict.value(forKey: "full_name") as? String else { return nil }
         guard let description = dict.value(forKey: "description") as? String else { return nil }
+        let size = dict.value(forKey: "size") as? Int64
+
         self.id = id
         self.name = name
         self.description = description
+        self.size = size
     }
     
 }

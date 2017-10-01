@@ -15,6 +15,9 @@
 		84295BA71F81539A0082DA5F /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295BA61F81539A0082DA5F /* RepositoryCell.swift */; };
 		84295BA91F8154780082DA5F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295BA81F8154780082DA5F /* Repository.swift */; };
 		84295BAB1F8155FE0082DA5F /* Repository+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84295BAA1F8155FE0082DA5F /* Repository+Services.swift */; };
+		84D73FEE1F8164AA009E0593 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D73FED1F8164AA009E0593 /* RepositoryViewController.swift */; };
+		84D73FF01F816C36009E0593 /* IntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D73FEF1F816C36009E0593 /* IntegerExtensions.swift */; };
+		84D73FF21F8172ED009E0593 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D73FF11F8172ED009E0593 /* StringExtensions.swift */; };
 		906AD7652714D61267F9C77C /* Pods_augment_github.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D3A38FEEC1F7F37D497D3 /* Pods_augment_github.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		84295BA61F81539A0082DA5F /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		84295BA81F8154780082DA5F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		84295BAA1F8155FE0082DA5F /* Repository+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+Services.swift"; sourceTree = "<group>"; };
+		84D73FED1F8164AA009E0593 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		84D73FEF1F816C36009E0593 /* IntegerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerExtensions.swift; sourceTree = "<group>"; };
+		84D73FF11F8172ED009E0593 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				84295B8B1F814C760082DA5F /* RepositoriesViewController.swift */,
+				84D73FED1F8164AA009E0593 /* RepositoryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 		84295BA31F814E740082DA5F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84D73FEF1F816C36009E0593 /* IntegerExtensions.swift */,
+				84D73FF11F8172ED009E0593 /* StringExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -300,10 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D73FF21F8172ED009E0593 /* StringExtensions.swift in Sources */,
 				84295BA71F81539A0082DA5F /* RepositoryCell.swift in Sources */,
 				84295BAB1F8155FE0082DA5F /* Repository+Services.swift in Sources */,
 				84295B8C1F814C760082DA5F /* RepositoriesViewController.swift in Sources */,
+				84D73FF01F816C36009E0593 /* IntegerExtensions.swift in Sources */,
 				84295B8A1F814C760082DA5F /* AppDelegate.swift in Sources */,
+				84D73FEE1F8164AA009E0593 /* RepositoryViewController.swift in Sources */,
 				84295BA91F8154780082DA5F /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
