@@ -28,4 +28,13 @@ extension Repository {
         }
     }
     
+    class func fetchRepository(withName name: String, callback: @escaping (Repository?) -> ()) {
+        let url = "https://api.github.com/repos/\(name)"
+        
+        Alamofire.request(url).responseJSON { response in
+            guard let jsonRepository = response.result.value as? NSDictionary else { return callback(nil) }
+            callback(Repository(fromDict: jsonRepository))
+        }
+    }
+    
 }

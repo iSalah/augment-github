@@ -20,5 +20,27 @@ class RepositoryViewController: UITableViewController {
     @IBOutlet weak var commitsLabel: UILabel!
     @IBOutlet weak var contributorsLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        reloadData()
+        fetchData()
+    }
+    
+    func fetchData() {
+        guard let repository = repository else { return }
+        
+        Repository.fetchRepository(withName: repository.name) { (repository) in
+            self.repository?.size = repository?.size
+            self.reloadData()
+        }
+    }
+    
+    func reloadData() {
+        guard let repository = repository else { return }
+        nameLabel.text = repository.name
+        descriptionLabel.text = repository.description
+        sizeLabel.text = "\(repository.size?.fileSizeFormat ?? "")"
+    }
+    
 }
 
